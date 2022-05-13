@@ -3,5 +3,6 @@ kind: Kustomization
 resources:
   - base/gitops-cp4d-instance-db2oltp-operandreg-sa-sa.yaml
   - base/ibm-common-services-db2oltp-operandreg-sa-rbac.yaml
+  - base/namespace-cpd-operators.yaml
   - base/namespace-gitops-cp4d-instance.yaml
   - base/namespace-ibm-common-services.yaml
