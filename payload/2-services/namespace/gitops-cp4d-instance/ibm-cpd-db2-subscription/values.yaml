@@ -1,0 +1,11 @@
+"common_services_namespace": "ibm-common-services"
+"name": "ibm-db2oltp-cp4d-operator-catalog-subscription"
+"operator_namespace": "cpd-operators"
+"spec":
+  "channel": "v1.0"
+  "installPlanApproval": "Automatic"
+  "name": "ibm-db2oltp-cp4d-operator"
+  "source": "ibm-operator-catalog"
+  "sourceNamespace": "openshift-marketplace"
+"syncWave": "-5"
+
