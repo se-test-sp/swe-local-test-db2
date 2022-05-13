@@ -1,4 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - instances/gitops-cp4d-instance-ibm-cpd-db2-instance.yaml
   - operators/gitops-cp4d-instance-ibm-cpd-db2-subscription.yaml
