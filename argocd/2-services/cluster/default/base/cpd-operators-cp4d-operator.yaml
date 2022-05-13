@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cpd-operators-cp4d-operator
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: cpd-operators
+    server: https://kubernetes.default.svc
+  project: 2-services
+  source:
+    path: payload/2-services/namespace/cpd-operators/cp4d-operator
+    repoURL: https://github.com/se-test-sp/swe-local-test-db2
+    targetRevision: main
+    helm:
+      releaseName: cp4d-operator
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  ignoreDifferences: []
