@@ -1,0 +1,8 @@
+"cpd_namespace": "gitops-cp4d-instance"
+"name": "db2oltp-cr2"
+"spec":
+  "license":
+    "accept": "true"
+    "db_type": "db2oltp"
+    "license": "Advanced"
+
