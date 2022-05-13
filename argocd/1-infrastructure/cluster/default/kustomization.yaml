@@ -7,3 +7,4 @@ resources:
   - base/namespace-gitops-cp4d-instance.yaml
   - base/namespace-ibm-common-services.yaml
   - base/openshift-marketplace-ibm-catalogs.yaml
+  - base/openshift-marketplace-ibm-entitlement-key.yaml
