@@ -1,0 +1,34 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: db2oltp-operandreg-sa
+  annotations:
+    argocd.argoproj.io/sync-wave: "-5"
+rules:
+- "apiGroups":
+  - "operator.ibm.com"
+  "resourceNames": null
+  "resources":
+  - "operandregistries"
+  "verbs":
+  - "get"
+  - "apply"
+  - "list"
+  - "patch"
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: db2oltp-operandreg-sa
+  annotations:
+    argocd.argoproj.io/sync-wave: "-5"
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: db2oltp-operandreg-sa
+subjects:
+- kind: ServiceAccount
+  name: db2oltp-operandreg-sa
+  namespace: gitops-cp4d-instance
+---
